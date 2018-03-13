@@ -1,5 +1,5 @@
 #include "game.h"
-void InitiaArr(char arr[ROW][COL],int row,int col)   //³õÊ¼»¯ÆåÅÌ
+void InitiaArr(char arr[ROW][COL],int row,int col)   //åˆå§‹åŒ–æ£‹ç›˜
 {
 	int i=0,j=0;
 	for(i=0;i<row;i++)
@@ -8,7 +8,7 @@ void InitiaArr(char arr[ROW][COL],int row,int col)   //³õÊ¼»¯ÆåÅÌ
 			arr[i][j]=' ';
 	}
 }
-void DisplayShow(char arr[ROW][COL],int row,int col)   //´òÓ¡ÆåÅÌ
+void DisplayShow(char arr[ROW][COL],int row,int col)   //æ‰“å°æ£‹ç›˜
 {
 	int i=0;
 	int j=0;
@@ -20,7 +20,7 @@ void DisplayShow(char arr[ROW][COL],int row,int col)   //´òÓ¡ÆåÅÌ
 			printf("---|---|---\n");
 	}
 }
-void ComputerMove(char arr[ROW][COL],int row,int col)		//computerÏÂ
+void ComputerMove(char arr[ROW][COL],int row,int col)		//computerä¸‹
 {
 	int x=0,y=0;
 	Sleep(1000);
@@ -36,7 +36,7 @@ void ComputerMove(char arr[ROW][COL],int row,int col)		//computerÏÂ
 		}
 	}
 }
-void PlayerMove(char arr[ROW][COL],int row,int col)		//playerÏÂ
+void PlayerMove(char arr[ROW][COL],int row,int col)		//playerä¸‹
 {
 	int x=0,y=0;
 	printf("\n");
@@ -64,7 +64,7 @@ void PlayerMove(char arr[ROW][COL],int row,int col)		//playerÏÂ
 	}
 }
 
-static int draw(char arr[ROW][COL],int row,int col)			//Æ½¾ÖÅĞ¶Ï
+static int draw(char arr[ROW][COL],int row,int col)			//å¹³å±€åˆ¤æ–­
 {
 	int i=0,j=0;
 	for(i=0;i<row;i++)
@@ -84,7 +84,7 @@ char IfWin(char arr[ROW][COL],int row,int col)
 	{
 		if(arr[i][0]==arr[i][1]&&arr[i][1]==arr[i][2]&&arr[i][0]!=' ')
 			return arr[i][0];
-	}
+	} 
 	for(i=0;i<col;i++)
 	{
 		if(arr[0][i]==arr[1][i]&&arr[1][i]==arr[2][i]&&arr[0][i]!=' ')
